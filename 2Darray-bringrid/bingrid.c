@@ -14,7 +14,7 @@ bool str2board(board* brd, char* str)
    }else if(strlen(str) % 2 != 0){     //check even
        return false;
    }else{
-      brd->sz = strlen(str) / 2;        //put string into board      correct:sqrt(strlen(str))       ??????
+      brd->sz = sqrt(strlen(str));        //put string into board      correct:sqrt(strlen(str))       ??????
       for(int i = 0;i < brd->sz;i ++){
          for(int j = 0;j < brd->sz;j ++){
             brd->b2d[i][j] = str[k];
